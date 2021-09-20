@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+  h1 {
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace
+  }
+  .todo {
+    margin: auto;
+    box-shadow: none;
+    padding: 20px;
+    &:focus {
+      border-color: rgb(64, 143, 216);
+    }
+  }
+}
