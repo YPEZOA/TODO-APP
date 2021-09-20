@@ -1,15 +1,20 @@
 .header {
   text-align: center;
+  padding-bottom: 20px;
   h1 {
-    font-weight: 900;
-    font-family: 'Courier New', Courier, monospace
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
   }
   .todo {
     margin: auto;
     box-shadow: none;
     padding: 20px;
+    font-style: italic;
+    border-radius: 0;
     &:focus {
-      border-color: rgb(64, 143, 216);
+      border: none;
+      box-shadow: 1px 2px 5px 0px #a1a1a1;
     }
   }
 }

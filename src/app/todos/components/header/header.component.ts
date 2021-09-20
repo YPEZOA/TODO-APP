@@ -16,9 +16,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeText(event: Event): void {
-    const target = event.target as HTMLInputElement;
-    this.text = target.value;
+  changeText(event: any): void {
+    this.text = event.target.value.replace(/[^a-zA-Z ]/g, "");
   }
 
   addTodo(): void {

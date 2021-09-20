@@ -4,6 +4,7 @@ import { TodosComponent } from './todos.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -12,7 +13,8 @@ import { TodoComponent } from './components/todo/todo.component';
     TodosComponent,
     HeaderComponent,
     MainComponent,
-    TodoComponent
+    TodoComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule

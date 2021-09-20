@@ -30,6 +30,11 @@ export class TodosService {
       };
     });
     this.todos$.next(updateTodos);
+    console.log(this.todos$.getValue());
+  }
+
+  changeFilter(filterName: FilterEnum): void {
+    this.filter$.next(filterName);
   }
 
 }
