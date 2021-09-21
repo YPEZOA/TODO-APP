@@ -2,7 +2,8 @@
   <input type="checkbox" class="toggle-all" name="toggle-all" id="toggle-all" [checked]="isAllTodosSelected$ | async"
     (change)="toggleAllTodos($event)"
   >
-  <label for="toggle=all">Mark all as completed</label>
+  <label class="toggle" for="toggle-all"> Mark all as completed</label>
+  <p class="info">double click the task to edit</p>
   <ul class="todo-list">
     <app-todo
       *ngFor="let todo of visibleTodos$ | async"

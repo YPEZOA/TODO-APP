@@ -1,14 +1,47 @@
 .todo-list {
+  .view {
+    .toggle {
+      margin-right: 20px;
+    }
+  }
   list-style: none;
   padding: 23px;
   border-bottom: 1px solid #fff;
-  background-color: #5cbaa5;
+  background-color: #a76861;
   color: #fff;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: 100;
+  .destroy {
+    display: none;
+    border: none;
+    font-family: cursive;
+    color: #f2f2f2;
+    background: transparent;
+    font-size: 20px;
+    float: right;
+    font-weight: 100;
+  }
+  &:hover {
+    .destroy {
+      display: block;
+      transform: scale(1.1);
+      transition: 1s;
+    }
+  }
 }
 
 .editing {
-  border: 1px solid #cccc;
+  display: none;
+}
+
+.edit{
+  border-radius: 0;
+  padding: 15px;
+  font-style: italic;
+  color: rgba(122, 122, 122, 0.8);
+  border-color: #959595;
+  &:focus {
+    box-shadow: none;
+  }
 }
