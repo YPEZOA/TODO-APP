@@ -21,7 +21,6 @@ export class TodoComponent implements OnInit {
   }
 
   setTodoInEditMode(): void {
-    console.log('setTodo');
     this.setEditingIdEvent.emit(this.todo.id);
   }
 
@@ -31,17 +30,14 @@ export class TodoComponent implements OnInit {
 
   toggleTodo(): void {
     this.todosService.toggleTodo(this.todo.id);
-    console.log('ToggleTodo');
   }
 
   changeText(event: Event): void {
     const value = (event.target as HTMLInputElement).value;
     this.editingText = value;
-    console.log('change Text');
   }
 
   changeTodo(): void {
-    console.log('changeTodo', this.editingText);
     this.todosService.changeTodo(this.todo.id, this.editingText);
     this.setEditingIdEvent.emit('');
   }

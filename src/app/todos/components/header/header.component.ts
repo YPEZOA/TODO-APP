@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit {
     if (!this.text.trim().length) return;
     this.todoService.addTodo(this.text);
     this.text = '';
-    console.log(this.todoService.todos$.getValue());
   }
 
 }

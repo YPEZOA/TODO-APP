@@ -35,7 +35,6 @@ export class FooterComponent implements OnInit {
 
   changeFilter(event: Event, filterName: FilterEnum):void {
     event.preventDefault();
-    console.log(filterName);
     this.todoService.changeFilter(filterName);
   }
 
