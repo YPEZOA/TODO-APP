@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
   visibleTodos$!: Observable<TodoInterface[]>;
   noTodoClass$!: Observable<boolean>;
   isAllTodosSelected$!: Observable<boolean>;
+  editingId!: string | null;
 
   constructor(private todoService: TodosService) { }
 
@@ -22,6 +23,7 @@ export class MainComponent implements OnInit {
     this.isAllTodosSelected$ = this.todoService.todos$.pipe(
       map(todos => todos.every(todo => todo.isCompleted))
     );
+
     this.noTodoClass$ = this.todoService.todos$.pipe(
       map(todos => todos.length === 0));
     this.visibleTodos$ = combineLatest(
@@ -43,4 +45,7 @@ export class MainComponent implements OnInit {
     this.todoService.toggleAll(target.checked);
   }
 
+  setEditingId(editingId: string | null): void {
+    this.editingId = editingId;
+  }
 }

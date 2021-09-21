@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
   filterEnum = FilterEnum;
 
   constructor(private todoService: TodosService) {
-   }
+  }
 
   ngOnInit(): void {
     this.activeCount$ = this.todoService.todos$.pipe(
@@ -30,15 +30,13 @@ export class FooterComponent implements OnInit {
       map(todos => todos.length === 0)
     );
 
-    this.filter$ = this.todoService.filter$
+    this.filter$ = this.todoService.filter$;
   }
 
   changeFilter(event: Event, filterName: FilterEnum):void {
     event.preventDefault();
-    console.log('changeFilter', filterName);
+    console.log(filterName);
     this.todoService.changeFilter(filterName);
   }
-
-
 
 }

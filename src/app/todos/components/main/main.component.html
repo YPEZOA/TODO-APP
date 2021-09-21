@@ -6,7 +6,10 @@
   <ul class="todo-list">
     <app-todo
       *ngFor="let todo of visibleTodos$ | async"
-      [todo]="todo">
+      [todo]="todo"
+      [isEditing]="editingId === todo.id"
+      (setEditingIdEvent)="setEditingId($event)"
+    >
     </app-todo>
   </ul>
 </section>
